@@ -27,6 +27,10 @@ app.use(helmet());
 app.use(cors());
 app.use(xss());
 //paths
+
+app.get("/", (rew, res) => {
+  res.send("Mock-It-Up API");
+});
 app.use("/api/v1/main", route);
 app.use("/api/v1/admin", adminRoute);
 
